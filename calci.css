@@ -1,113 +1,152 @@
-body 
-{
+body {
     padding: 0;
-    margin: 0;
-    display: flex;
+    margin-left: 35%;
+    margin-top: 0;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     min-height: 100vh;
     user-select: none;
     background: #ecf0f3;
+    font-family: Arial, sans-serif;
 }
 
-.container 
-{   
+.container {
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 13px 13px 20px #cbced1,
-              -13px -13px 20px #ffffff; 
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    max-width: 400px;
+    width: 100%;
+    /* position: fixed; */
 }
 
-.display #screen 
-{
+.display #screen {
     margin-bottom: .5em;
-    width: 93%;
+    width: 95%;
     height: 70px;
-    font-size: 35px;
+    font-size: 2em;
     outline: none;
     border: none;
     text-align: right;
     padding-right: .5em;
     background: #ecf0f3;
     border-radius: 6px;
-    box-shadow: inset 8px 8px 8px #cbced1,
-                inset -8px -8px 8px #ffffff;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
 }
 
-.row button 
-{
-    cursor: pointer;
+.row button {
     width: 60px;
-    height: 50px;
-    font-size: 16px;
+    height: 60px;
+    font-size: 1.5em;
     border: none;
     outline: none;
     margin: 5px;
     border-radius: 4px;
     transition: .1s;
-    box-shadow: 5px 5px 8px #00000020,
-               -5px -5px 8px #ffff;
+    box-shadow: 5px 5px 8px #00000020, -5px -5px 8px #ffff;
+    flex: 1;
 }
 
-.row button:hover 
-{
-    box-shadow:  inset 5px 5px 8px rgba(16, 16, 16, .1),
-                 inset -5px -5px 8px #fff;
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row button:hover {
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1), inset -5px -5px 8px #fff;
     background: #fff;
 }
 
-#eval 
-{
+#eval {
     background: #33ccff;
     color: #fff;
-    box-shadow: inset 5px 5px 8px #66d9ff,
-                inset -5px -5px 8px #00ace6;
+    box-shadow: inset 5px 5px 8px #66d9ff, inset -5px -5px 8px #00ace6;
 }
 
-#eval:hover 
-{
-    box-shadow: inset 5px 5px 8px #00ace6,
-                inset -5px -5px 8px #00ace6;
+#eval:hover {
+    box-shadow: inset 5px 5px 8px #00ace6, inset -5px -5px 8px #00ace6;
 }
 
-#ac 
-{
+#ac {
     background: #33cc33;
     color: #fff;
 }
 
-#ac:hover 
-{
-    box-shadow: inset 5px 5px 8px #2eb82e,
-                inset -5px -5px 8px #33cc33;
+#ac:hover {
+    box-shadow: inset 5px 5px 8px #2eb82e, inset -5px -5px 8px #33cc33;
 }
 
-#ce 
-{
+#ce {
     background: #ff3399;
     color: #fff;
 }
 
-#ce:hover 
-{
-    box-shadow: inset 5px 5px 8px #e60073,
-                inset -5px -5px 8px #ff3399;
+#ce:hover {
+    box-shadow: inset 5px 5px 8px #e60073, inset -5px -5px 8px #ff3399;
 }
 
-/*================= Heading CSS =================*/
-h1
-{
-    position: absolute; 
-    top: 1.5em;
-    font-size: 45px;
-    font-family: sans-serif;
+/* Heading CSS */
+h1 .page.heading{
+    font-size: 2.5em;
     text-transform: uppercase;
-    color: #33ccff;
-    letter-spacing: 6px;
-    text-shadow: 1px 1px 1px #d1d9e6,
-                1px 1px 2px #d1d9e6,
-                3px 3px 3px #d1d9e6,
-                4px 4px 4px #d1d9e6,
-                5px 5px 5px #d1d9e6, 
-                6px 6px 6px #d1d9e6;
+    /* color: #34ccff; */
+    letter-spacing: 2px;
+    /* text-shadow: 1px 1px 1px #d1d9e6, 1px 1px 2px #d1d9e6,
+                 3px 3px 3px #d1d9e6, 4px 4px 4px #d1d9e6,
+                 5px 5px 5px #d1d9e6, 6px 6px 6px #d1d9e6; */
+    text-align: center;
+    margin-top: 0%;
+    margin-left: 0;
+}
+
+h1 {
+    color: #34ccff;
+    /* letter-spacing: 2px; */
+    text-shadow: 1px 1px 1px #d1d9e6, 1px 1px 2px #d1d9e6,
+                 3px 3px 3px #d1d9e6, 4px 4px 4px #d1d9e6,
+                 5px 5px 5px #d1d9e6, 6px 6px 6px #d1d9e6;
+    /* text-align: center; */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 300px;
+    }
+
+    .display #screen {
+        font-size: 1.5em;
+        height: 60px;
+    }
+
+    .row button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .display #screen {
+        font-size: 1.2em;
+        height: 50px;
+    }
+
+    .row button {
+        width: 45px;
+        height: 45px;
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
 }
